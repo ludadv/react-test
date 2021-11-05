@@ -2,6 +2,14 @@ import React from "react";
 
 class ContactForm extends React.Component
 {
+    constructor() {
+        super();
+
+        this.state = {
+            name: 'z',
+        }
+    }
+
     render() {
         return (
             <div
@@ -10,6 +18,18 @@ class ContactForm extends React.Component
             >
                 <div className="contact-form-title" style={{color: this.props['title-color']}}>
                     {this.props.title}
+                </div>
+                <div className="contact-form-name">
+                    <p>
+                        Hello {this.state.name}
+                    </p>
+                    <label htmlFor="name">Name</label>
+                    <input
+                        value={this.state.name}
+                        onChange={event => this.setState({ name: event.target.value })}
+                        type="text"
+                        id="name"
+                    />
                 </div>
             </div>
        );
