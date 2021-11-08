@@ -2,11 +2,11 @@ import React from "react";
 
 class ContactForm extends React.Component
 {
-    constructor() {
+    constructor(props) {
         super();
 
         this.state = {
-            name: '',
+            name: props.name,
         }
     }
 
@@ -21,18 +21,31 @@ class ContactForm extends React.Component
                 </div>
                 <div className="contact-form-name">
                     <p>
-                        Hello {this.state.name}
+                        { this.state.name ? 'Hello ' + this.state.name : '' }
                     </p>
-                    <label htmlFor="name">Name</label>
+                    <label className="mr-5" htmlFor="name">Name</label>
                     <input
                         value={this.state.name}
                         onChange={event => this.setState({ name: event.target.value })}
                         type="text"
                         id="name"
                     />
+                    <a
+                        onClick={event => this.clearInput(event)}
+                        href="#"
+                        className="ml-5"
+                    >
+                        &#10006;
+                    </a>
                 </div>
             </div>
        );
+   }
+
+   clearInput(event) {
+        event.preventDefault();
+
+       this.setState({ name: '' });
    }
 }
 

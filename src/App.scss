@@ -1,0 +1,54 @@
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+
+.App-header {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #61dafb;
+  padding: 15px;
+
+  .header-logo {
+    height: 50px;
+  }
+
+  .header-menu {
+    height: 20px;
+
+    .header-menu-item {
+      margin-right: 10px;
+      text-decoration: none;
+
+      &:nth-last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        color: cadetblue;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.App-body {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: aquamarine;
+  padding: 10px;
+
+  .contact-form {
+    @import "components/ContactForm.scss";
+  }
+}

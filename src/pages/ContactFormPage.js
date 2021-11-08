@@ -9,11 +9,13 @@ class ContactFormPage extends React.Component {
                 <ContactForm
                     title="First contact form"
                     title-color="red"
+                    name="John"
                 />
                 <ContactForm
                     title="Second contact form"
                     title-color="green"
                     background-color="#f7e0c0"
+                    name="Jack"
                 />
             </div>
         );
