@@ -6,7 +6,7 @@ class ContactForm extends React.Component
         super();
 
         this.state = {
-            name: 'z',
+            name: '',
         }
     }
 
@@ -33,10 +33,6 @@ class ContactForm extends React.Component
                 </div>
             </div>
        );
-   }
-
-   getColor() {
-        return 'black;'
    }
 }
 

@@ -1,20 +1,17 @@
 import React from "react";
-import ContactForm from "./ContactForm";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "../pages/HomePage";
+import ContactFormPage from "../pages/ContactFormPage";
 
 class AppBody extends React.Component {
     render() {
         return (
             <div className="App-body">
-                BODY
-                <ContactForm
-                    title="First contact form"
-                    title-color="red"
-                />
-                <ContactForm
-                    title="Second contact form"
-                    title-color="green"
-                    background-color="#f7e0c0"
-                />
+                <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    <Route path='/contact-form' element={<ContactFormPage />} />
+                </Routes>
             </div>
         );
     }
